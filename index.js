@@ -16,6 +16,7 @@
 */
 function processFirstItem(stringList, callback) {
   return callback(stringList[0])
+  console.log()
 }
 
 // ⭐️ Example Challenge END ⭐️
