@@ -29,9 +29,22 @@ function processFirstItem(stringList, callback) {
  * 
  * 1. What is the difference between counter1 and counter2?
  * 
+ * The count Variable is outside the function on the 2nd counter and inside on the first. 
+ * 
  * 2. Which of the two uses a closure? How can you tell?
  * 
+ * Counter1 uses closure - It has a function nested inside it. 
+ * 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
+ * 
+ * Counter 1 would be preferable if you wanted to invoke/call it multiple times resetting it each time, 
+ * for example, you could start a counter
+ *  to keep track of the score of a game and invoke the function again to keep track of a different 
+ * game without effecting the count of the original game.
+ * 
+ * Counter 2 would be preferable for a single occurence count as it is more concise and a smaller
+ * ammount of code. Or if we wanted to use count again elsewhere in the code (however global variables are considered bad practice).
+ *  
  *
 */
 
@@ -77,11 +90,6 @@ finalScore(inning, 9) might return:
 }
 
 */ 
-
-function inning(){
-  let score = Math.floor(Math.random() * 3);
-  return score; 
-}
 
 function finalScore(callback, numOfInnings){
  let homeScore = 0;
