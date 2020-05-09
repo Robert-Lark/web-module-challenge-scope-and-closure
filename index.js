@@ -78,16 +78,27 @@ finalScore(inning, 9) might return:
 
 */ 
 
-function finalScore(callback, numOfInnings){
-
-  return {
-    "Home": inning,
-    "Away": inning
-  }
-
+function inning(){
+  let score = Math.floor(Math.random() * 3);
+  return score; 
 }
 
-finalScore(inning, 9)
+function finalScore(callback, numOfInnings){
+ let homeScore = 0;
+ let awayScore = 0;
+ for (let i = 0; i<=numOfInnings; i++) {
+   homeScore += callback()
+   awayScore += callback()
+    }
+  return {
+    "Home": homeScore, 
+    "Away": awayScore  
+  }
+}
+
+(finalScore(inning, 9));
+
+
 /* Task 4: 
 
 Create a function called `scoreboard` that accepts the following parameters: 
