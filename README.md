@@ -42,6 +42,10 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closures are functions with preserved data. Unlike normal function execution when variables have closure they are stored in memory and are not 
+destroyed when the function ends. 
+
 2. Study the following code, then answer the questions below.
 
 ```js
