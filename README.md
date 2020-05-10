@@ -42,6 +42,10 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+Closures are functions with preserved data. Unlike normal function execution when variables have closure they are stored in memory and are not 
+destroyed when the function ends. 
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +67,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+line 53: This is where the child function lives which gives the code closure. 
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+The string will always be the same up until the new roll element is populated - that will be different most of the time but (statistically) the same part of the time.
+
 c. What is the lexical scope of `newRoll`? 
+
+newRoll has function scope.
 
 ### Task 3 - Stretch Goals
 
@@ -91,6 +103,8 @@ addSix(21); // returns 27
 ```
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
+
+Functional Programing Vrs Object Orientated Programming: 
 
 ## Resources
 
